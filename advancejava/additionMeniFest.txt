@@ -1,0 +1,2 @@
+Main-Class: com.huhao.code.advancejava.manifestoperation.MenifestTest
+
