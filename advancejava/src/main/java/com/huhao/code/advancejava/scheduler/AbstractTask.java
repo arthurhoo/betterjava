@@ -27,7 +27,7 @@ package com.huhao.code.advancejava.scheduler;
 /**
  * Created by huhao on 2017/1/19.
  */
-public abstract class AbstractTask implements Task {
+public abstract class AbstractTask implements Task,Cloneable {
 
     protected Long    period;
 

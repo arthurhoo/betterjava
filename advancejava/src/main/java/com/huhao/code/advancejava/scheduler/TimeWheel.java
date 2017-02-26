@@ -135,7 +135,7 @@ public class TimeWheel implements AbstractScheduler {
         List<AbstractTask> taskInHocker = dialInSeconds.get(pointer);
         if (taskInHocker != null && !taskInHocker.isEmpty()) {
             for (AbstractTask task : taskInHocker) {
-                tasks.add(task);
+                tasks.put(task);
 
             }
             if(!startConsumer){

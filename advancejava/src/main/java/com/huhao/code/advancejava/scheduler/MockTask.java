@@ -9,7 +9,7 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 /**
  * Created by huhao on 2017/1/29.
  */
-public class MockTask extends AbstractTask {
+public class MockTask extends AbstractTask{
 
     private Long order;
 
@@ -91,5 +91,16 @@ public class MockTask extends AbstractTask {
 
     public void setOrder(Long order) {
         this.order = order;
+    }
+
+    @Override
+    public Object clone(){
+        MockTask mockTask = null;
+        try {
+            mockTask = (MockTask)super.clone();
+        }catch (CloneNotSupportedException e){
+            System.out.println(e.getMessage());
+        }
+        return mockTask;
     }
 }
