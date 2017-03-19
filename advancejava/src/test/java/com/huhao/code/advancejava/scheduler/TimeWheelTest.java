@@ -27,12 +27,14 @@ public class TimeWheelTest {
             }
         }
 
-        while(true){
+        int j = 0;
+        while(j < 20){
             try {
                 Thread.sleep(100L);
             } catch (Exception e) {
                 e.printStackTrace();
             }
+            j++;
         }
 
     }
