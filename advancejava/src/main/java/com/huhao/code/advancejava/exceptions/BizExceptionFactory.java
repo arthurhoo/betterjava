@@ -20,12 +20,15 @@ public class BizExceptionFactory {
     }
 
     public static BizException newInstance(String message){
-        BizException exception = exceptionMap.get(message);
-        if(exception == null){
-            exception = new BizException(message);
-            exceptionMap.put(message,exception);
+        synchronized (BizExceptionFactory.class){
+            BizException exception = exceptionMap.get(message);
+            if(exception == null){
+                exception = new BizException(message);
+                exceptionMap.put(message,exception);
+            }
+            return exception;
         }
-        return exception;
+
     }
 
     // register Exception
