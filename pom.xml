@@ -11,6 +11,8 @@
     <modules>
         <module>jvmcodes</module>
         <module>advancejava</module>
+        <module>spring-boot-app</module>
+        <module>greys-cases</module>
     </modules>
 
     <dependencyManagement>
