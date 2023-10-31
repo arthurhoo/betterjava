@@ -14,6 +14,10 @@
         <module>spring-boot-app</module>
         <module>greys-cases</module>
         <module>java-jms</module>
+        <module>design-parttern</module>
+        <module>design-parttern/adapter-pattern</module>
+        <module>algorithm</module>
+        <module>algorithm/sort</module>
     </modules>
 
     <dependencyManagement>
