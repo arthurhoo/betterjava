@@ -18,6 +18,7 @@
         <module>design-parttern/adapter-pattern</module>
         <module>algorithm</module>
         <module>algorithm/sort</module>
+        <module>netty-study</module>
     </modules>
 
     <dependencyManagement>
