@@ -1,6 +1,5 @@
 package com.huhao.code.netty.echo.client;
 
-import com.huhao.code.netty.echo.server.EchoServer;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -8,6 +7,7 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.channel.socket.nio.NioSocketChannel;
 
 import java.net.InetSocketAddress;
 
@@ -29,7 +29,7 @@ public class EchoClient {
         try {
 
             Bootstrap bootstrap = new Bootstrap();
-            bootstrap.group(eventLoopGroup).channel(NioServerSocketChannel.class)
+            bootstrap.group(eventLoopGroup).channel(NioSocketChannel.class)
                     .remoteAddress(new InetSocketAddress(host,port))
                     .handler(new ChannelInitializer<SocketChannel>() {
                         @Override
@@ -50,7 +50,7 @@ public class EchoClient {
     public static void main(String[] args) throws InterruptedException {
         if(args.length != 2){
             System.err.println(
-                    "Usage: "+ EchoServer.class.getSimpleName()+" <host> <port>"
+                    "Usage: "+ EchoClient.class.getSimpleName()+" <host> <port>"
             );
         }
         String host = args[0];
